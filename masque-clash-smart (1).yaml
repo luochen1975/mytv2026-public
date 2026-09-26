@@ -31,46 +31,6 @@ dns:
     - https://dns.alidns.com/dns-query
 
 proxies:
-  - name: "CDN | 2606:4700:104::1 | 8095"
-    type: masque
-    server: "2606:4700:104::1"
-    port: 8095
-    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: "172.16.0.2/32"
-    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
-    mtu: 1280
-    udp: true
-    sni: "www.microsoft.com"
-    ip-stack:
-      mode: auto
-      congestion-controller: cubic
-    remote-dns-resolve: true
-    dns:
-      - "1.1.1.1"
-      - "8.8.8.8"
-      - "2606:4700:4700::1111"
-      - "2001:4860:4860::8888"
-  - name: "CDN | 162.159.198.2 | 4500"
-    type: masque
-    server: "162.159.198.2"
-    port: 4500
-    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: "172.16.0.2/32"
-    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
-    mtu: 1280
-    udp: true
-    sni: "www.microsoft.com"
-    ip-stack:
-      mode: auto
-      congestion-controller: cubic
-    remote-dns-resolve: true
-    dns:
-      - "1.1.1.1"
-      - "8.8.8.8"
-      - "2606:4700:4700::1111"
-      - "2001:4860:4860::8888"
   - name: "CDN | 162.159.198.1 | 443"
     type: masque
     server: "162.159.198.1"
@@ -91,9 +51,9 @@ proxies:
       - "8.8.8.8"
       - "2606:4700:4700::1111"
       - "2001:4860:4860::8888"
-  - name: "CDN | masque1.bestcf.eu.cc | 500"
+  - name: "CDN | 162.159.198.1 | 500"
     type: masque
-    server: "masque1.bestcf.eu.cc"
+    server: "162.159.198.1"
     port: 500
     private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
     public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
@@ -111,50 +71,10 @@ proxies:
       - "8.8.8.8"
       - "2606:4700:4700::1111"
       - "2001:4860:4860::8888"
-  - name: "CDN | masque.bestcf.eu.cc | 4500"
+  - name: "CDN | 162.159.198.2 | 443"
     type: masque
-    server: "masque.bestcf.eu.cc"
-    port: 4500
-    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: "172.16.0.2/32"
-    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
-    mtu: 1280
-    udp: true
-    sni: "www.microsoft.com"
-    ip-stack:
-      mode: auto
-      congestion-controller: cubic
-    remote-dns-resolve: true
-    dns:
-      - "1.1.1.1"
-      - "8.8.8.8"
-      - "2606:4700:4700::1111"
-      - "2001:4860:4860::8888"
-  - name: "CDN | 2606:4700:103::2 | 443"
-    type: masque
-    server: "2606:4700:103::2"
+    server: "162.159.198.2"
     port: 443
-    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
-    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-    ip: "172.16.0.2/32"
-    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
-    mtu: 1280
-    udp: true
-    sni: "www.microsoft.com"
-    ip-stack:
-      mode: auto
-      congestion-controller: cubic
-    remote-dns-resolve: true
-    dns:
-      - "1.1.1.1"
-      - "8.8.8.8"
-      - "2606:4700:4700::1111"
-      - "2001:4860:4860::8888"
-  - name: "CDN | 162.159.198.1 | 4500"
-    type: masque
-    server: "162.159.198.1"
-    port: 4500
     private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
     public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
     ip: "172.16.0.2/32"
@@ -191,9 +111,89 @@ proxies:
       - "8.8.8.8"
       - "2606:4700:4700::1111"
       - "2001:4860:4860::8888"
-  - name: "CDN | 2606:4700:104::2 | 500"
+  - name: "CDN | 162.159.198.2 | 4500"
     type: masque
-    server: "2606:4700:104::2"
+    server: "162.159.198.2"
+    port: 4500
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 162.159.198.2 | 8095"
+    type: masque
+    server: "162.159.198.2"
+    port: 8095
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 2606:4700:103::1 | 443"
+    type: masque
+    server: "2606:4700:103::1"
+    port: 443
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 2606:4700:103::2 | 4500"
+    type: masque
+    server: "2606:4700:103::2"
+    port: 4500
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 2606:4700:104::1 | 500"
+    type: masque
+    server: "2606:4700:104::1"
     port: 500
     private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
     public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
@@ -211,10 +211,170 @@ proxies:
       - "8.8.8.8"
       - "2606:4700:4700::1111"
       - "2001:4860:4860::8888"
-  - name: "CDN | 2606:4700:104::1 | 4500"
+  - name: "CDN | 2606:4700:104::2 | 443"
+    type: masque
+    server: "2606:4700:104::2"
+    port: 443
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 162.159.199.2 | 443"
+    type: masque
+    server: "162.159.199.2"
+    port: 443
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | masque.bestcf.eu.cc | 500"
+    type: masque
+    server: "masque.bestcf.eu.cc"
+    port: 500
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | masque1.bestcf.eu.cc | 500"
+    type: masque
+    server: "masque1.bestcf.eu.cc"
+    port: 500
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 2606:4700:103::2 | 443"
+    type: masque
+    server: "2606:4700:103::2"
+    port: 443
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 2606:4700:104::1 | 443"
     type: masque
     server: "2606:4700:104::1"
-    port: 4500
+    port: 443
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | masque.bestcf.eu.cc | 443"
+    type: masque
+    server: "masque.bestcf.eu.cc"
+    port: 443
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | masque1.bestcf.eu.cc | 443"
+    type: masque
+    server: "masque1.bestcf.eu.cc"
+    port: 443
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | masque2.bestcf.eu.cc | 443"
+    type: masque
+    server: "masque2.bestcf.eu.cc"
+    port: 443
     private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
     public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
     ip: "172.16.0.2/32"
@@ -271,10 +431,230 @@ proxies:
       - "8.8.8.8"
       - "2606:4700:4700::1111"
       - "2001:4860:4860::8888"
+  - name: "CDN | 2606:4700:104::2 | 500"
+    type: masque
+    server: "2606:4700:104::2"
+    port: 500
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 162.159.199.2 | 500"
+    type: masque
+    server: "162.159.199.2"
+    port: 500
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
   - name: "CDN | masque2.bestcf.eu.cc | 500"
     type: masque
     server: "masque2.bestcf.eu.cc"
     port: 500
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 162.159.198.2 | 1701"
+    type: masque
+    server: "162.159.198.2"
+    port: 1701
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 2606:4700:103::2 | 1701"
+    type: masque
+    server: "2606:4700:103::2"
+    port: 1701
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 162.159.198.1 | 1701"
+    type: masque
+    server: "162.159.198.1"
+    port: 1701
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 2606:4700:103::1 | 1701"
+    type: masque
+    server: "2606:4700:103::1"
+    port: 1701
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 2606:4700:104::1 | 1701"
+    type: masque
+    server: "2606:4700:104::1"
+    port: 1701
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 2606:4700:104::2 | 1701"
+    type: masque
+    server: "2606:4700:104::2"
+    port: 1701
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | 162.159.199.2 | 1701"
+    type: masque
+    server: "162.159.199.2"
+    port: 1701
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | masque.bestcf.eu.cc | 1701"
+    type: masque
+    server: "masque.bestcf.eu.cc"
+    port: 1701
+    private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
+    public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
+    ip: "172.16.0.2/32"
+    ipv6: "2606:4700:110:8cad:f4d0:39b8:e121:6d21/128"
+    mtu: 1280
+    udp: true
+    sni: "www.microsoft.com"
+    ip-stack:
+      mode: auto
+      congestion-controller: cubic
+    remote-dns-resolve: true
+    dns:
+      - "1.1.1.1"
+      - "8.8.8.8"
+      - "2606:4700:4700::1111"
+      - "2001:4860:4860::8888"
+  - name: "CDN | masque1.bestcf.eu.cc | 1701"
+    type: masque
+    server: "masque1.bestcf.eu.cc"
+    port: 1701
     private-key: "MHcCAQEEILwGJu9Qtt7MxzhBBI+1q9dybo4gbiAemAbdhKMCpwasoAoGCCqGSM49AwEHoUQDQgAEXC6Fbi0cKIVPrhHU4Fc/wrALpKozv1pLy83Cs1W4X6viQ+5dwqb3qhihoCnD1+fffS54065F9IjPEM5QVZzJDg=="
     public-key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
     ip: "172.16.0.2/32"
@@ -509,6 +889,114 @@ proxy-providers:
     override:
       additional-prefix: "🇭🇰 HK | "
       dialer-proxy: "WARP中转"
+  FREE-TW-GENERAL:
+    type: http
+    url: "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-TW.yaml"
+    path: "./providers/free-TW-general.yaml"
+    interval: 3600
+    size-limit: 8388608
+    proxy: "WARP中转"
+    exclude-type: "hysteria2|tuic|wireguard|http|https|socks4|socks5"
+    health-check:
+      enable: true
+      url: "https://www.gstatic.com/generate_204"
+      expected-status: "204"
+      interval: 120
+      timeout: 5000
+      lazy: false
+    override:
+      additional-prefix: "🇹🇼 TW | "
+      dialer-proxy: "WARP中转"
+  FREE-TW-AI:
+    type: http
+    url: "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-TW.yaml"
+    path: "./providers/free-TW-ai.yaml"
+    interval: 3600
+    size-limit: 8388608
+    proxy: "WARP中转"
+    exclude-type: "hysteria2|tuic|wireguard|http|https|socks4|socks5"
+    health-check:
+      enable: true
+      url: "https://chatgpt.com/"
+      expected-status: "200-399"
+      interval: 120
+      timeout: 9000
+      lazy: false
+    override:
+      additional-prefix: "🇹🇼 TW | "
+      dialer-proxy: "WARP中转"
+  FREE-TW-STREAM:
+    type: http
+    url: "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-TW.yaml"
+    path: "./providers/free-TW-stream.yaml"
+    interval: 3600
+    size-limit: 8388608
+    proxy: "WARP中转"
+    exclude-type: "hysteria2|tuic|wireguard|http|https|socks4|socks5"
+    health-check:
+      enable: true
+      url: "https://www.netflix.com/"
+      expected-status: "200-399"
+      interval: 120
+      timeout: 9000
+      lazy: false
+    override:
+      additional-prefix: "🇹🇼 TW | "
+      dialer-proxy: "WARP中转"
+  FREE-KR-GENERAL:
+    type: http
+    url: "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml"
+    path: "./providers/free-KR-general.yaml"
+    interval: 3600
+    size-limit: 8388608
+    proxy: "WARP中转"
+    exclude-type: "hysteria2|tuic|wireguard|http|https|socks4|socks5"
+    health-check:
+      enable: true
+      url: "https://www.gstatic.com/generate_204"
+      expected-status: "204"
+      interval: 120
+      timeout: 5000
+      lazy: false
+    override:
+      additional-prefix: "🇰🇷 KR | "
+      dialer-proxy: "WARP中转"
+  FREE-KR-AI:
+    type: http
+    url: "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml"
+    path: "./providers/free-KR-ai.yaml"
+    interval: 3600
+    size-limit: 8388608
+    proxy: "WARP中转"
+    exclude-type: "hysteria2|tuic|wireguard|http|https|socks4|socks5"
+    health-check:
+      enable: true
+      url: "https://chatgpt.com/"
+      expected-status: "200-399"
+      interval: 120
+      timeout: 9000
+      lazy: false
+    override:
+      additional-prefix: "🇰🇷 KR | "
+      dialer-proxy: "WARP中转"
+  FREE-KR-STREAM:
+    type: http
+    url: "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml"
+    path: "./providers/free-KR-stream.yaml"
+    interval: 3600
+    size-limit: 8388608
+    proxy: "WARP中转"
+    exclude-type: "hysteria2|tuic|wireguard|http|https|socks4|socks5"
+    health-check:
+      enable: true
+      url: "https://www.netflix.com/"
+      expected-status: "200-399"
+      interval: 120
+      timeout: 9000
+      lazy: false
+    override:
+      additional-prefix: "🇰🇷 KR | "
+      dialer-proxy: "WARP中转"
 
 proxy-groups:
   - name: "🚀 WARP自动"
@@ -522,37 +1010,75 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "CDN | 2606:4700:104::1 | 8095"
-      - "CDN | 162.159.198.2 | 4500"
       - "CDN | 162.159.198.1 | 443"
-      - "CDN | masque1.bestcf.eu.cc | 500"
-      - "CDN | masque.bestcf.eu.cc | 4500"
-      - "CDN | 2606:4700:103::2 | 443"
-      - "CDN | 162.159.198.1 | 4500"
+      - "CDN | 162.159.198.1 | 500"
+      - "CDN | 162.159.198.2 | 443"
       - "CDN | 162.159.198.2 | 500"
-      - "CDN | 2606:4700:104::2 | 500"
-      - "CDN | 2606:4700:104::1 | 4500"
+      - "CDN | 162.159.198.2 | 4500"
+      - "CDN | 162.159.198.2 | 8095"
+      - "CDN | 2606:4700:103::1 | 443"
+      - "CDN | 2606:4700:103::2 | 4500"
+      - "CDN | 2606:4700:104::1 | 500"
+      - "CDN | 2606:4700:104::2 | 443"
+      - "CDN | 162.159.199.2 | 443"
+      - "CDN | masque.bestcf.eu.cc | 500"
+      - "CDN | masque1.bestcf.eu.cc | 500"
+      - "CDN | 2606:4700:103::2 | 443"
+      - "CDN | 2606:4700:104::1 | 443"
+      - "CDN | masque.bestcf.eu.cc | 443"
+      - "CDN | masque1.bestcf.eu.cc | 443"
+      - "CDN | masque2.bestcf.eu.cc | 443"
       - "CDN | 2606:4700:103::2 | 500"
       - "CDN | 2606:4700:103::1 | 500"
+      - "CDN | 2606:4700:104::2 | 500"
+      - "CDN | 162.159.199.2 | 500"
       - "CDN | masque2.bestcf.eu.cc | 500"
+      - "CDN | 162.159.198.2 | 1701"
+      - "CDN | 2606:4700:103::2 | 1701"
+      - "CDN | 162.159.198.1 | 1701"
+      - "CDN | 2606:4700:103::1 | 1701"
+      - "CDN | 2606:4700:104::1 | 1701"
+      - "CDN | 2606:4700:104::2 | 1701"
+      - "CDN | 162.159.199.2 | 1701"
+      - "CDN | masque.bestcf.eu.cc | 1701"
+      - "CDN | masque1.bestcf.eu.cc | 1701"
   - name: "🌎 WARP可手动"
     type: select
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
     proxies:
       - "🚀 WARP自动"
-      - "CDN | 2606:4700:104::1 | 8095"
-      - "CDN | 162.159.198.2 | 4500"
       - "CDN | 162.159.198.1 | 443"
-      - "CDN | masque1.bestcf.eu.cc | 500"
-      - "CDN | masque.bestcf.eu.cc | 4500"
-      - "CDN | 2606:4700:103::2 | 443"
-      - "CDN | 162.159.198.1 | 4500"
+      - "CDN | 162.159.198.1 | 500"
+      - "CDN | 162.159.198.2 | 443"
       - "CDN | 162.159.198.2 | 500"
-      - "CDN | 2606:4700:104::2 | 500"
-      - "CDN | 2606:4700:104::1 | 4500"
+      - "CDN | 162.159.198.2 | 4500"
+      - "CDN | 162.159.198.2 | 8095"
+      - "CDN | 2606:4700:103::1 | 443"
+      - "CDN | 2606:4700:103::2 | 4500"
+      - "CDN | 2606:4700:104::1 | 500"
+      - "CDN | 2606:4700:104::2 | 443"
+      - "CDN | 162.159.199.2 | 443"
+      - "CDN | masque.bestcf.eu.cc | 500"
+      - "CDN | masque1.bestcf.eu.cc | 500"
+      - "CDN | 2606:4700:103::2 | 443"
+      - "CDN | 2606:4700:104::1 | 443"
+      - "CDN | masque.bestcf.eu.cc | 443"
+      - "CDN | masque1.bestcf.eu.cc | 443"
+      - "CDN | masque2.bestcf.eu.cc | 443"
       - "CDN | 2606:4700:103::2 | 500"
       - "CDN | 2606:4700:103::1 | 500"
+      - "CDN | 2606:4700:104::2 | 500"
+      - "CDN | 162.159.199.2 | 500"
       - "CDN | masque2.bestcf.eu.cc | 500"
+      - "CDN | 162.159.198.2 | 1701"
+      - "CDN | 2606:4700:103::2 | 1701"
+      - "CDN | 162.159.198.1 | 1701"
+      - "CDN | 2606:4700:103::1 | 1701"
+      - "CDN | 2606:4700:104::1 | 1701"
+      - "CDN | 2606:4700:104::2 | 1701"
+      - "CDN | 162.159.199.2 | 1701"
+      - "CDN | masque.bestcf.eu.cc | 1701"
+      - "CDN | masque1.bestcf.eu.cc | 1701"
   - name: "WARP中转"
     type: select
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
@@ -576,6 +1102,8 @@ proxy-groups:
       - "FREE-JP-GENERAL"
       - "FREE-SG-GENERAL"
       - "FREE-HK-GENERAL"
+      - "FREE-TW-GENERAL"
+      - "FREE-KR-GENERAL"
   - name: "🤖 AI自动优选"
     type: url-test
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
@@ -592,6 +1120,8 @@ proxy-groups:
       - "FREE-JP-AI"
       - "FREE-SG-AI"
       - "FREE-HK-AI"
+      - "FREE-TW-AI"
+      - "FREE-KR-AI"
   - name: "🎬 流媒体自动优选"
     type: url-test
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
@@ -608,6 +1138,8 @@ proxy-groups:
       - "FREE-JP-STREAM"
       - "FREE-SG-STREAM"
       - "FREE-HK-STREAM"
+      - "FREE-TW-STREAM"
+      - "FREE-KR-STREAM"
   - name: "🌍 免费落地可手动"
     type: select
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
@@ -620,6 +1152,8 @@ proxy-groups:
       - "FREE-JP-GENERAL"
       - "FREE-SG-GENERAL"
       - "FREE-HK-GENERAL"
+      - "FREE-TW-GENERAL"
+      - "FREE-KR-GENERAL"
   - name: "🇺🇸 US"
     type: url-test
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
@@ -672,6 +1206,32 @@ proxy-groups:
     max-failed-times: 2
     use:
       - "FREE-HK-GENERAL"
+  - name: "🇹🇼 TW"
+    type: url-test
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
+    hidden: true
+    url: https://www.gstatic.com/generate_204
+    expected-status: 204
+    interval: 120
+    tolerance: 20
+    timeout: 5000
+    lazy: false
+    max-failed-times: 2
+    use:
+      - "FREE-TW-GENERAL"
+  - name: "🇰🇷 KR"
+    type: url-test
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
+    hidden: true
+    url: https://www.gstatic.com/generate_204
+    expected-status: 204
+    interval: 120
+    tolerance: 20
+    timeout: 5000
+    lazy: false
+    max-failed-times: 2
+    use:
+      - "FREE-KR-GENERAL"
   - name: "♻️ 自动选择"
     type: url-test
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
@@ -687,6 +1247,8 @@ proxy-groups:
       - "🇯🇵 JP"
       - "🇸🇬 SG"
       - "🇭🇰 HK"
+      - "🇹🇼 TW"
+      - "🇰🇷 KR"
       - "🚀 WARP自动"
   - name: "🛡️ 故障转移"
     type: fallback
@@ -702,6 +1264,8 @@ proxy-groups:
       - "🇯🇵 JP"
       - "🇸🇬 SG"
       - "🇭🇰 HK"
+      - "🇹🇼 TW"
+      - "🇰🇷 KR"
       - "🚀 WARP自动"
   - name: "⚖️ 负载均衡"
     type: load-balance
@@ -716,6 +1280,8 @@ proxy-groups:
       - "FREE-JP-GENERAL"
       - "FREE-SG-GENERAL"
       - "FREE-HK-GENERAL"
+      - "FREE-TW-GENERAL"
+      - "FREE-KR-GENERAL"
   - name: "🚀 节点选择"
     type: select
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
@@ -727,6 +1293,8 @@ proxy-groups:
       - "🇯🇵 JP"
       - "🇸🇬 SG"
       - "🇭🇰 HK"
+      - "🇹🇼 TW"
+      - "🇰🇷 KR"
       - "🌍 免费落地可手动"
       - "🌎 WARP可手动"
       - "🚀 WARP自动"
@@ -751,6 +1319,8 @@ proxy-groups:
       - "🇯🇵 JP"
       - "🇸🇬 SG"
       - "🇭🇰 HK"
+      - "🇹🇼 TW"
+      - "🇰🇷 KR"
       - "🚀 节点选择"
       - "🌍 免费落地可手动"
       - "🌎 WARP可手动"
@@ -764,6 +1334,8 @@ proxy-groups:
       - "🇯🇵 JP"
       - "🇸🇬 SG"
       - "🇭🇰 HK"
+      - "🇹🇼 TW"
+      - "🇰🇷 KR"
       - "🚀 节点选择"
       - "🌍 免费落地可手动"
       - "🌎 WARP可手动"
@@ -780,19 +1352,38 @@ proxy-groups:
     lazy: false
     max-failed-times: 1
     proxies:
-      - "CDN | 2606:4700:104::1 | 8095"
-      - "CDN | 162.159.198.2 | 4500"
       - "CDN | 162.159.198.1 | 443"
-      - "CDN | masque1.bestcf.eu.cc | 500"
-      - "CDN | masque.bestcf.eu.cc | 4500"
-      - "CDN | 2606:4700:103::2 | 443"
-      - "CDN | 162.159.198.1 | 4500"
+      - "CDN | 162.159.198.1 | 500"
+      - "CDN | 162.159.198.2 | 443"
       - "CDN | 162.159.198.2 | 500"
-      - "CDN | 2606:4700:104::2 | 500"
-      - "CDN | 2606:4700:104::1 | 4500"
+      - "CDN | 162.159.198.2 | 4500"
+      - "CDN | 162.159.198.2 | 8095"
+      - "CDN | 2606:4700:103::1 | 443"
+      - "CDN | 2606:4700:103::2 | 4500"
+      - "CDN | 2606:4700:104::1 | 500"
+      - "CDN | 2606:4700:104::2 | 443"
+      - "CDN | 162.159.199.2 | 443"
+      - "CDN | masque.bestcf.eu.cc | 500"
+      - "CDN | masque1.bestcf.eu.cc | 500"
+      - "CDN | 2606:4700:103::2 | 443"
+      - "CDN | 2606:4700:104::1 | 443"
+      - "CDN | masque.bestcf.eu.cc | 443"
+      - "CDN | masque1.bestcf.eu.cc | 443"
+      - "CDN | masque2.bestcf.eu.cc | 443"
       - "CDN | 2606:4700:103::2 | 500"
       - "CDN | 2606:4700:103::1 | 500"
+      - "CDN | 2606:4700:104::2 | 500"
+      - "CDN | 162.159.199.2 | 500"
       - "CDN | masque2.bestcf.eu.cc | 500"
+      - "CDN | 162.159.198.2 | 1701"
+      - "CDN | 2606:4700:103::2 | 1701"
+      - "CDN | 162.159.198.1 | 1701"
+      - "CDN | 2606:4700:103::1 | 1701"
+      - "CDN | 2606:4700:104::1 | 1701"
+      - "CDN | 2606:4700:104::2 | 1701"
+      - "CDN | 162.159.199.2 | 1701"
+      - "CDN | masque.bestcf.eu.cc | 1701"
+      - "CDN | masque1.bestcf.eu.cc | 1701"
   - name: "⚡ YouTube-免费极速"
     type: url-test
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
@@ -809,6 +1400,8 @@ proxy-groups:
       - "FREE-JP-GENERAL"
       - "FREE-SG-GENERAL"
       - "FREE-HK-GENERAL"
+      - "FREE-TW-GENERAL"
+      - "FREE-KR-GENERAL"
   - name: "▶️ YouTube高速"
     type: select
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
@@ -819,6 +1412,8 @@ proxy-groups:
       - "🇯🇵 JP"
       - "🇸🇬 SG"
       - "🇭🇰 HK"
+      - "🇹🇼 TW"
+      - "🇰🇷 KR"
       - "🚀 节点选择"
       - "🌎 WARP可手动"
       - "🎯 全球直连"
@@ -831,6 +1426,8 @@ proxy-groups:
       - "🇯🇵 JP"
       - "🇸🇬 SG"
       - "🇭🇰 HK"
+      - "🇹🇼 TW"
+      - "🇰🇷 KR"
       - "♻️ 自动选择"
       - "🌎 WARP可手动"
       - "🎯 全球直连"
@@ -844,6 +1441,8 @@ proxy-groups:
       - "🇯🇵 JP"
       - "🇸🇬 SG"
       - "🇭🇰 HK"
+      - "🇹🇼 TW"
+      - "🇰🇷 KR"
       - "♻️ 自动选择"
       - "🌎 WARP可手动"
   - name: "🍎 苹果服务"
@@ -856,6 +1455,8 @@ proxy-groups:
       - "🇯🇵 JP"
       - "🇸🇬 SG"
       - "🇭🇰 HK"
+      - "🇹🇼 TW"
+      - "🇰🇷 KR"
       - "♻️ 自动选择"
       - "🌎 WARP可手动"
   - name: "☁️ CloudflareCDN"
@@ -868,6 +1469,8 @@ proxy-groups:
       - "🇯🇵 JP"
       - "🇸🇬 SG"
       - "🇭🇰 HK"
+      - "🇹🇼 TW"
+      - "🇰🇷 KR"
       - "🌎 WARP可手动"
       - "🎯 全球直连"
   - name: "🌐 国外网站"
@@ -881,6 +1484,8 @@ proxy-groups:
       - "🇯🇵 JP"
       - "🇸🇬 SG"
       - "🇭🇰 HK"
+      - "🇹🇼 TW"
+      - "🇰🇷 KR"
       - "🌎 WARP可手动"
       - "🎯 全球直连"
   - name: "🐟 漏网之鱼"
@@ -893,6 +1498,8 @@ proxy-groups:
       - "🇯🇵 JP"
       - "🇸🇬 SG"
       - "🇭🇰 HK"
+      - "🇹🇼 TW"
+      - "🇰🇷 KR"
       - "🌎 WARP可手动"
       - "🎯 全球直连"
   - name: "PROXY"
