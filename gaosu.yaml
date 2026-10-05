@@ -1,0 +1,1962 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: :9090
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  default-nameserver:
+  - 223.5.5.5
+  - 8.8.8.8
+  - 1.1.1.1
+  proxy-server-nameserver:
+  - https://dns.alidns.com/dns-query
+  nameserver-policy:
+    geosite:gfw,geolocation-!cn:
+    - https://1.1.1.1/dns-query#🚀 节点选择
+    - https://1.0.0.1/dns-query#🚀 节点选择
+    - https://8.8.8.8/dns-query#🚀 节点选择
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  - https://8.8.8.8/dns-query#🚀 节点选择
+  fallback:
+  - https://1.1.1.1/dns-query#🚀 节点选择
+  - https://1.0.0.1/dns-query#🚀 节点选择
+  - https://8.8.8.8/dns-query#🚀 节点选择
+  fallback-filter:
+    geoip: false
+    geoip-code: CN
+    ipcidr:
+    - 240.0.0.0/4
+  fake-ip-filter:
+  - +.lan
+  - +.microsoft*.com
+  - localhost.ptlogin2.qq.com
+proxies:
+- name: vless-479091138
+  type: vless
+  server: 137.184.218.169
+  port: 36925
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub'
+  type: ss
+  server: 209.46.102.22
+  port: 8388
+  password: 1hhrqrokj3ag
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: 🇯🇵JP-149.22.87.204-0252
+  type: ss
+  server: 149.22.87.204
+  port: 443
+  password: shadowsocks
+  cipher: aes-128-gcm
+  udp: true
+- name: 未知 VLESS-53
+  type: vless
+  server: 51.158.206.97
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 👉🆔@v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:71.53ms
+  type: vless
+  server: dey.lnmarketplace.net
+  port: 443
+  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: xhttp
+  xhttp-opts:
+    path: /kavir
+    mode: stream-one
+  client-fingerprint: firefox
+- name: '@DeltaKroneckerGithub-01'
+  type: ss
+  server: 82.38.31.191
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-02'
+  type: ss
+  server: 84.247.155.196
+  port: 80
+  password: 3eOFeNssde7PYYMv
+  cipher: aes-256-gcm
+  udp: true
+- name: qoli_011
+  type: vless
+  server: 206.71.158.125
+  port: 443
+  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  tls: true
+  alpn:
+  - h2
+  udp: true
+  xudp: true
+  encryption: none
+  network: xhttp
+  xhttp-opts:
+    path: /kavir
+    host: dey.lnmarketplace.net
+    mode: stream-one
+  servername: dey.lnmarketplace.net
+  client-fingerprint: chrome
+- name: 加拿大-09
+  type: ss
+  server: 51.222.12.127
+  port: 445
+  password: zDNVedRFPQexG9v
+  cipher: aes-256-gcm
+  udp: true
+- name: '@DeltaKroneckerGithub-03'
+  type: ss
+  server: 108.181.58.239
+  port: 8388
+  password: CJmTCCx7Ltud
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: 🇺🇸US-108.181.0.177-0066
+  type: ss
+  server: 108.181.0.177
+  port: 8388
+  password: G5p6ww4o67HB
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-04'
+  type: ss
+  server: 82.38.31.48
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: 🇬🇧GB-82.38.31.202-0206
+  type: ss
+  server: 82.38.31.202
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-05'
+  type: vless
+  server: private.netraidly.ru
+  port: 40443
+  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
+    short-id: 2bc0
+  servername: deepl.com
+  client-fingerprint: qq
+- name: '@DeltaKroneckerGithub-06'
+  type: vless
+  server: id-nl-01.mintrocket.org
+  port: 443
+  uuid: f0a52dd3-4377-4402-a450-210bc81bcf25
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: XU7da9vkBex4TUPo1d-ctFY_N6zouBiCRnbnUK82i3Q
+    short-id: fee1f986a72444db
+  servername: id-nl-01.mintrocket.org
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub-07'
+  type: vless
+  server: 137.184.218.169
+  port: 36925
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇳🇱NL_83
+  type: ss
+  server: 82.38.31.17
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-08'
+  type: vless
+  server: node-nl.shtormvpn.shop
+  port: 443
+  uuid: cc4d63e2-3a86-49b3-9598-328bbe93e56c
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: yI6maXxTQ8zRHg39X8YMQtKW-IVfNIn0_OCUIQKmcXw
+  servername: google.com
+  client-fingerprint: firefox
+- name: '@DeltaKroneckerGithub-09'
+  type: vless
+  server: 196.245.52.146
+  port: 25535
+  uuid: c379d8e4-c67d-42ec-a3ed-ca99d1ad0546
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: Jh7CocBJSA55VZcLfXwXwoQ_Hi5pV-L1vv1SY-IrSh4
+    short-id: 7642ce57308852e7
+  servername: www.microsoft.com
+  client-fingerprint: firefox
+- name: '@DeltaKroneckerGithub-10'
+  type: vmess
+  server: 45.32.57.118
+  port: 4433
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+  tls: false
+  skip-cert-verify: false
+  xudp: true
+- name: '@DeltaKroneckerGithub-11'
+  type: vmess
+  server: 89.39.161.157
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  skip-cert-verify: false
+  servername: aksai.org
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: aksai.org
+  xudp: true
+- name: '[hy2]DE｜德国-法兰克福/1(ipv6)'
+  type: hysteria2
+  server: 2a0b:4142:a86::3
+  port: 1443
+  password: 87938527-9e81-48e0-aef8-9a8d923fff42
+  sni: 5df48d103c9de1v6.587458.xyz
+- name: '@DeltaKroneckerGithub-12'
+  type: vless
+  server: 109.176.202.7
+  port: 443
+  uuid: f0a52dd3-4377-4402-a450-210bc81bcf25
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: XU7da9vkBex4TUPo1d-ctFY_N6zouBiCRnbnUK82i3Q
+    short-id: fee1f986a72444db
+  servername: id-nl-01.mintrocket.org
+  client-fingerprint: firefox
+- name: '@DeltaKroneckerGithub-13'
+  type: vless
+  server: billing.netraidly.ru
+  port: 40443
+  uuid: 17d29827-7cf1-4115-b40d-548e10ec355d
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM
+    short-id: aa3c
+  servername: deepl.com
+  client-fingerprint: qq
+- name: '@DeltaKroneckerGithub-14'
+  type: ss
+  server: 82.38.31.176
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: 未知 SS-454
+  type: ss
+  server: 82.38.31.206
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: 🇸🇬 Node-5f65bc46
+  type: vmess
+  server: ww11.levikogjgfdd.ir
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+  tls: false
+  skip-cert-verify: false
+  xudp: true
+- name: '@DeltaKroneckerGithub-15'
+  type: vless
+  server: 15.204.97.198
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub-16'
+  type: vless
+  server: 15.204.97.216
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: ''
+  type: vless
+  server: dey.lnmarketplace.net
+  port: 443
+  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  tls: true
+  alpn:
+  - h2
+  udp: true
+  xudp: true
+  encryption: none
+  network: xhttp
+  xhttp-opts:
+    path: /kavir
+    host: dey.lnmarketplace.net
+    mode: stream-one
+  servername: dey.lnmarketplace.net
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub-17'
+  type: vless
+  server: 159.89.87.21
+  port: 28190
+  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
+  servername: aws.amazon.com
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub-18'
+  type: ss
+  server: 156.146.38.167
+  port: 443
+  password: shadowsocks
+  cipher: aes-128-gcm
+  udp: true
+- name: vless-1275624775
+  type: vless
+  server: 198.251.78.29
+  port: 2053
+  uuid: c423cc1b-f88e-421c-9a16-c480d84da20f
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: Uk5b-Wh_uxeCc7R8NS9iWE40xc0h9wWC04rSB9yhgAw
+    short-id: b5d625695ec82c7e
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub-19'
+  type: vless
+  server: 3.39.4.109
+  port: 13672
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub-20'
+  type: vmess
+  server: 149.88.23.202
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+  tls: false
+  skip-cert-verify: false
+  xudp: true
+- name: '@DeltaKroneckerGithub-21'
+  type: vless
+  server: 15.204.97.197
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub-22'
+  type: vless
+  server: 15.204.97.219
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: qoli_051
+  type: vless
+  server: 152.228.139.33
+  port: 35108
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: grpc
+  reality-opts:
+    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
+    short-id: 52add08b86a5ccea
+  grpc-opts:
+    grpc-service-name: grpc-common3
+  servername: www.nvidia.com
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub-23'
+  type: ss
+  server: 185.213.23.63
+  port: 990
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-24'
+  type: vless
+  server: 104.16.10.185
+  port: 443
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0
+      Host: v2ray.simspeedup.com
+  servername: v2ray.simspeedup.com
+  client-fingerprint: unsafe
+- name: '@DeltaKroneckerGithub-25'
+  type: ss
+  server: 173.244.56.6
+  port: 443
+  password: shadowsocks
+  cipher: aes-128-gcm
+  udp: true
+- name: '@DeltaKroneckerGithub-26'
+  type: vless
+  server: 162.55.242.208
+  port: 2053
+  uuid: 659ffdfa-47d2-47d7-af40-5afe0907eead
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: jeS6Zu-p1Gf6GtraIAbpgQoSeT26Xq3GqgqVxccbVhY
+    short-id: 4d14da19b19cfc8c
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: '@DeltaKroneckerGithub-27'
+  type: vless
+  server: 109.104.106.149
+  port: 443
+  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: a_v5l6R-rpVGlENLeONW4sz-GdRwIoDqISOWXGov8nw
+    short-id: 87709fed663228e5
+  servername: d3-ro.cloud-cdn.xyz
+  client-fingerprint: edge
+- name: '@DeltaKroneckerGithub-28'
+  type: vmess
+  server: 198.57.27.190
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+  tls: false
+  skip-cert-verify: false
+  xudp: true
+- name: '@DeltaKroneckerGithub-29'
+  type: vless
+  server: 3.39.4.109
+  port: 18967
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub-30'
+  type: vless
+  server: nasnet-162191099-direct.mbghalibaf.com
+  port: 443
+  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  servername: nasnet-162191099-direct.mbghalibaf.com
+  client-fingerprint: chrome
+- name: 未知 SS-482
+  type: ss
+  server: 82.38.31.47
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: 英国-06
+  type: ss
+  server: 149.102.132.184
+  port: 80
+  password: g5h5jleTRSyO3Rk4
+  cipher: aes-256-gcm
+  udp: true
+- name: '@DeltaKroneckerGithub-31'
+  type: ss
+  server: 149.102.149.207
+  port: 443
+  password: LXchLsIwtCeUAUgu
+  cipher: aes-256-gcm
+  udp: true
+- name: vless-1149851409
+  type: vless
+  server: 3.114.220.22
+  port: 10583
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: '@confiig_hub'
+  type: vless
+  server: 206.71.158.124
+  port: 443
+  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  tls: true
+  alpn:
+  - h2
+  udp: true
+  xudp: true
+  encryption: none
+  network: xhttp
+  xhttp-opts:
+    path: /kavir
+    host: dey.lnmarketplace.net
+    mode: stream-one
+  servername: dey.lnmarketplace.net
+  client-fingerprint: chrome
+- name: 🇬🇧GB-82.38.31.10-0072
+  type: ss
+  server: 82.38.31.10
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: 🇩🇪DE-8.209.74.72-0120
+  type: ss
+  server: 8.209.74.72
+  port: 20001
+  password: PWpjPo3tqhPN4yRZ
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-32'
+  type: vless
+  server: nl3.freekeysh110.online
+  port: 443
+  uuid: 9b13807b-93e0-43c3-bd31-d0b0ed0c1d6b
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: zVEDSKwQEIM6xRD7YEhJakteNI2xPK3xhhKulDo_vWg
+    short-id: b664d93e9d7a04f1
+  servername: nl3.freekeysh110.online
+  client-fingerprint: edge
+- name: 🇬🇧GB-82.38.31.34-0086
+  type: ss
+  server: 82.38.31.34
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-33'
+  type: ss
+  server: 158.173.20.208
+  port: 443
+  password: shadowsocks
+  cipher: aes-128-gcm
+  udp: true
+- name: 🇬🇧GB-82.38.31.194-0091
+  type: ss
+  server: 82.38.31.194
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-34'
+  type: ss
+  server: 193.29.139.235
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-35'
+  type: vless
+  server: free-amsterdam-node-1.cloudwidecdn.com
+  port: 443
+  uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
+    short-id: 1d86d17709852910
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub-36'
+  type: vmess
+  server: aksai.org
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  skip-cert-verify: false
+  servername: aksai.org
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: aksai.org
+  xudp: true
+- name: '@DeltaKroneckerGithub-37'
+  type: vless
+  server: bl3fk52.sysopnova.art
+  port: 443
+  uuid: 441afe11-a180-4516-bb80-80a8a6b38705
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk
+    short-id: 5ee019e02e6ed99a
+  servername: yandex.ru
+  client-fingerprint: chrome
+- name: vless-1149851385
+  type: vless
+  server: 3.114.220.22
+  port: 18007
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  servername: www.apple.com
+  client-fingerprint: random
+- name: '@DeltaKroneckerGithub-38'
+  type: ss
+  server: 82.38.31.162
+  port: 443
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-39'
+  type: vless
+  server: 87.192.47.10
+  port: 52006
+  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
+  flow: xtls-rprx-vision
+  tls: true
+  alpn:
+  - h2
+  - http/1.1
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  servername: grok.setlisting.ru
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub-40'
+  type: vless
+  server: 89.185.81.95
+  port: 8765
+  uuid: df9f5aca-eda0-428f-a752-e53866153d12
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: Da_s-Cgqm5kqaIbCgXVJdrq_KF7fCQveRByRhKUzonc
+    short-id: 7bf47eabf939728b
+  servername: r-b8a34c.vless.monster
+  client-fingerprint: chrome
+- name: '@DeltaKroneckerGithub-41'
+  type: ss
+  server: 82.38.31.198
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: 未知 SS-454-01
+  type: ss
+  server: 82.38.31.207
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-42'
+  type: vless
+  server: 132.243.231.12
+  port: 443
+  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM
+    short-id: 5efa80b939612291
+  servername: d3-se1.cloud-cdn.xyz
+  client-fingerprint: firefox
+- name: '@DeltaKroneckerGithub-43'
+  type: ss
+  server: 51.77.225.200
+  port: 8388
+  password: zRZNBszYyWo5
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-44'
+  type: ss
+  server: 82.38.31.203
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-45'
+  type: vless
+  server: 89.125.147.214
+  port: 443
+  uuid: 9b13807b-93e0-43c3-bd31-d0b0ed0c1d6b
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: zVEDSKwQEIM6xRD7YEhJakteNI2xPK3xhhKulDo_vWg
+    short-id: b664d93e9d7a04f1
+  servername: nl3.freekeysh110.online
+  client-fingerprint: firefox
+- name: '@DeltaKroneckerGithub-46'
+  type: ss
+  server: 82.38.31.36
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: 未知 SS-433
+  type: ss
+  server: 198.98.53.130
+  port: 443
+  password: eDfN7SODQceIOmIAbtJJtK
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: '@DeltaKroneckerGithub-47'
+  type: vless
+  server: 185.166.154.111
+  port: 443
+  uuid: 91d734be-a3d0-4d50-83ab-74cf7b6966fa
+  flow: xtls-rprx-vision
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: bQZcMViJWXus9rMSTOa-ZAaUJC0mIlPx7XmzrLp8GQU
+    short-id: 94f32cfc
+  servername: cdn.bulkavpn.top
+  client-fingerprint: firefox
+- name: '@DeltaKroneckerGithub-48'
+  type: vless
+  server: 95.216.27.15
+  port: 2053
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
+  tls: true
+  udp: true
+  xudp: true
+  encryption: none
+  network: tcp
+  reality-opts:
+    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
+    short-id: d368b94e275ab080
+  servername: www.google.com
+  client-fingerprint: firefox
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+  - DIRECT
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - vless-479091138
+  - '@DeltaKroneckerGithub'
+  - 🇯🇵JP-149.22.87.204-0252
+  - 未知 VLESS-53
+  - 👉🆔@v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:71.53ms
+  - '@DeltaKroneckerGithub-01'
+  - '@DeltaKroneckerGithub-02'
+  - qoli_011
+  - 加拿大-09
+  - '@DeltaKroneckerGithub-03'
+  - 🇺🇸US-108.181.0.177-0066
+  - '@DeltaKroneckerGithub-04'
+  - 🇬🇧GB-82.38.31.202-0206
+  - '@DeltaKroneckerGithub-05'
+  - '@DeltaKroneckerGithub-06'
+  - '@DeltaKroneckerGithub-07'
+  - 🇳🇱NL_83
+  - '@DeltaKroneckerGithub-08'
+  - '@DeltaKroneckerGithub-09'
+  - '@DeltaKroneckerGithub-10'
+  - '@DeltaKroneckerGithub-11'
+  - '[hy2]DE｜德国-法兰克福/1(ipv6)'
+  - '@DeltaKroneckerGithub-12'
+  - '@DeltaKroneckerGithub-13'
+  - '@DeltaKroneckerGithub-14'
+  - 未知 SS-454
+  - 🇸🇬 Node-5f65bc46
+  - '@DeltaKroneckerGithub-15'
+  - '@DeltaKroneckerGithub-16'
+  - ''
+  - '@DeltaKroneckerGithub-17'
+  - '@DeltaKroneckerGithub-18'
+  - vless-1275624775
+  - '@DeltaKroneckerGithub-19'
+  - '@DeltaKroneckerGithub-20'
+  - '@DeltaKroneckerGithub-21'
+  - '@DeltaKroneckerGithub-22'
+  - qoli_051
+  - '@DeltaKroneckerGithub-23'
+  - '@DeltaKroneckerGithub-24'
+  - '@DeltaKroneckerGithub-25'
+  - '@DeltaKroneckerGithub-26'
+  - '@DeltaKroneckerGithub-27'
+  - '@DeltaKroneckerGithub-28'
+  - '@DeltaKroneckerGithub-29'
+  - '@DeltaKroneckerGithub-30'
+  - 未知 SS-482
+  - 英国-06
+  - '@DeltaKroneckerGithub-31'
+  - vless-1149851409
+  - '@confiig_hub'
+  - 🇬🇧GB-82.38.31.10-0072
+  - 🇩🇪DE-8.209.74.72-0120
+  - '@DeltaKroneckerGithub-32'
+  - 🇬🇧GB-82.38.31.34-0086
+  - '@DeltaKroneckerGithub-33'
+  - 🇬🇧GB-82.38.31.194-0091
+  - '@DeltaKroneckerGithub-34'
+  - '@DeltaKroneckerGithub-35'
+  - '@DeltaKroneckerGithub-36'
+  - '@DeltaKroneckerGithub-37'
+  - vless-1149851385
+  - '@DeltaKroneckerGithub-38'
+  - '@DeltaKroneckerGithub-39'
+  - '@DeltaKroneckerGithub-40'
+  - '@DeltaKroneckerGithub-41'
+  - 未知 SS-454-01
+  - '@DeltaKroneckerGithub-42'
+  - '@DeltaKroneckerGithub-43'
+  - '@DeltaKroneckerGithub-44'
+  - '@DeltaKroneckerGithub-45'
+  - '@DeltaKroneckerGithub-46'
+  - 未知 SS-433
+  - '@DeltaKroneckerGithub-47'
+  - '@DeltaKroneckerGithub-48'
+- name: 🚀 手动切换1
+  type: select
+  proxies:
+  - vless-479091138
+  - '@DeltaKroneckerGithub'
+  - 🇯🇵JP-149.22.87.204-0252
+  - 未知 VLESS-53
+  - 👉🆔@v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:71.53ms
+  - '@DeltaKroneckerGithub-01'
+  - '@DeltaKroneckerGithub-02'
+  - qoli_011
+  - 加拿大-09
+  - '@DeltaKroneckerGithub-03'
+  - 🇺🇸US-108.181.0.177-0066
+  - '@DeltaKroneckerGithub-04'
+  - 🇬🇧GB-82.38.31.202-0206
+  - '@DeltaKroneckerGithub-05'
+  - '@DeltaKroneckerGithub-06'
+  - '@DeltaKroneckerGithub-07'
+  - 🇳🇱NL_83
+  - '@DeltaKroneckerGithub-08'
+  - '@DeltaKroneckerGithub-09'
+  - '@DeltaKroneckerGithub-10'
+  - '@DeltaKroneckerGithub-11'
+  - '[hy2]DE｜德国-法兰克福/1(ipv6)'
+  - '@DeltaKroneckerGithub-12'
+  - '@DeltaKroneckerGithub-13'
+  - '@DeltaKroneckerGithub-14'
+  - 未知 SS-454
+  - 🇸🇬 Node-5f65bc46
+  - '@DeltaKroneckerGithub-15'
+  - '@DeltaKroneckerGithub-16'
+  - ''
+  - '@DeltaKroneckerGithub-17'
+  - '@DeltaKroneckerGithub-18'
+  - vless-1275624775
+  - '@DeltaKroneckerGithub-19'
+  - '@DeltaKroneckerGithub-20'
+  - '@DeltaKroneckerGithub-21'
+  - '@DeltaKroneckerGithub-22'
+  - qoli_051
+  - '@DeltaKroneckerGithub-23'
+  - '@DeltaKroneckerGithub-24'
+  - '@DeltaKroneckerGithub-25'
+  - '@DeltaKroneckerGithub-26'
+  - '@DeltaKroneckerGithub-27'
+  - '@DeltaKroneckerGithub-28'
+  - '@DeltaKroneckerGithub-29'
+  - '@DeltaKroneckerGithub-30'
+  - 未知 SS-482
+  - 英国-06
+  - '@DeltaKroneckerGithub-31'
+  - vless-1149851409
+  - '@confiig_hub'
+  - 🇬🇧GB-82.38.31.10-0072
+  - 🇩🇪DE-8.209.74.72-0120
+  - '@DeltaKroneckerGithub-32'
+  - 🇬🇧GB-82.38.31.34-0086
+  - '@DeltaKroneckerGithub-33'
+  - 🇬🇧GB-82.38.31.194-0091
+  - '@DeltaKroneckerGithub-34'
+  - '@DeltaKroneckerGithub-35'
+  - '@DeltaKroneckerGithub-36'
+  - '@DeltaKroneckerGithub-37'
+  - vless-1149851385
+  - '@DeltaKroneckerGithub-38'
+  - '@DeltaKroneckerGithub-39'
+  - '@DeltaKroneckerGithub-40'
+  - '@DeltaKroneckerGithub-41'
+  - 未知 SS-454-01
+  - '@DeltaKroneckerGithub-42'
+  - '@DeltaKroneckerGithub-43'
+  - '@DeltaKroneckerGithub-44'
+  - '@DeltaKroneckerGithub-45'
+  - '@DeltaKroneckerGithub-46'
+  - 未知 SS-433
+  - '@DeltaKroneckerGithub-47'
+  - '@DeltaKroneckerGithub-48'
+- name: 🚀 手动切换2
+  type: select
+  proxies:
+  - vless-479091138
+  - '@DeltaKroneckerGithub'
+  - 🇯🇵JP-149.22.87.204-0252
+  - 未知 VLESS-53
+  - 👉🆔@v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:71.53ms
+  - '@DeltaKroneckerGithub-01'
+  - '@DeltaKroneckerGithub-02'
+  - qoli_011
+  - 加拿大-09
+  - '@DeltaKroneckerGithub-03'
+  - 🇺🇸US-108.181.0.177-0066
+  - '@DeltaKroneckerGithub-04'
+  - 🇬🇧GB-82.38.31.202-0206
+  - '@DeltaKroneckerGithub-05'
+  - '@DeltaKroneckerGithub-06'
+  - '@DeltaKroneckerGithub-07'
+  - 🇳🇱NL_83
+  - '@DeltaKroneckerGithub-08'
+  - '@DeltaKroneckerGithub-09'
+  - '@DeltaKroneckerGithub-10'
+  - '@DeltaKroneckerGithub-11'
+  - '[hy2]DE｜德国-法兰克福/1(ipv6)'
+  - '@DeltaKroneckerGithub-12'
+  - '@DeltaKroneckerGithub-13'
+  - '@DeltaKroneckerGithub-14'
+  - 未知 SS-454
+  - 🇸🇬 Node-5f65bc46
+  - '@DeltaKroneckerGithub-15'
+  - '@DeltaKroneckerGithub-16'
+  - ''
+  - '@DeltaKroneckerGithub-17'
+  - '@DeltaKroneckerGithub-18'
+  - vless-1275624775
+  - '@DeltaKroneckerGithub-19'
+  - '@DeltaKroneckerGithub-20'
+  - '@DeltaKroneckerGithub-21'
+  - '@DeltaKroneckerGithub-22'
+  - qoli_051
+  - '@DeltaKroneckerGithub-23'
+  - '@DeltaKroneckerGithub-24'
+  - '@DeltaKroneckerGithub-25'
+  - '@DeltaKroneckerGithub-26'
+  - '@DeltaKroneckerGithub-27'
+  - '@DeltaKroneckerGithub-28'
+  - '@DeltaKroneckerGithub-29'
+  - '@DeltaKroneckerGithub-30'
+  - 未知 SS-482
+  - 英国-06
+  - '@DeltaKroneckerGithub-31'
+  - vless-1149851409
+  - '@confiig_hub'
+  - 🇬🇧GB-82.38.31.10-0072
+  - 🇩🇪DE-8.209.74.72-0120
+  - '@DeltaKroneckerGithub-32'
+  - 🇬🇧GB-82.38.31.34-0086
+  - '@DeltaKroneckerGithub-33'
+  - 🇬🇧GB-82.38.31.194-0091
+  - '@DeltaKroneckerGithub-34'
+  - '@DeltaKroneckerGithub-35'
+  - '@DeltaKroneckerGithub-36'
+  - '@DeltaKroneckerGithub-37'
+  - vless-1149851385
+  - '@DeltaKroneckerGithub-38'
+  - '@DeltaKroneckerGithub-39'
+  - '@DeltaKroneckerGithub-40'
+  - '@DeltaKroneckerGithub-41'
+  - 未知 SS-454-01
+  - '@DeltaKroneckerGithub-42'
+  - '@DeltaKroneckerGithub-43'
+  - '@DeltaKroneckerGithub-44'
+  - '@DeltaKroneckerGithub-45'
+  - '@DeltaKroneckerGithub-46'
+  - 未知 SS-433
+  - '@DeltaKroneckerGithub-47'
+  - '@DeltaKroneckerGithub-48'
+- name: 🔯 故障转移
+  type: fallback
+  proxies:
+  - vless-479091138
+  - '@DeltaKroneckerGithub'
+  - 🇯🇵JP-149.22.87.204-0252
+  - 未知 VLESS-53
+  - 👉🆔@v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:71.53ms
+  - '@DeltaKroneckerGithub-01'
+  - '@DeltaKroneckerGithub-02'
+  - qoli_011
+  - 加拿大-09
+  - '@DeltaKroneckerGithub-03'
+  - 🇺🇸US-108.181.0.177-0066
+  - '@DeltaKroneckerGithub-04'
+  - 🇬🇧GB-82.38.31.202-0206
+  - '@DeltaKroneckerGithub-05'
+  - '@DeltaKroneckerGithub-06'
+  - '@DeltaKroneckerGithub-07'
+  - 🇳🇱NL_83
+  - '@DeltaKroneckerGithub-08'
+  - '@DeltaKroneckerGithub-09'
+  - '@DeltaKroneckerGithub-10'
+  - '@DeltaKroneckerGithub-11'
+  - '[hy2]DE｜德国-法兰克福/1(ipv6)'
+  - '@DeltaKroneckerGithub-12'
+  - '@DeltaKroneckerGithub-13'
+  - '@DeltaKroneckerGithub-14'
+  - 未知 SS-454
+  - 🇸🇬 Node-5f65bc46
+  - '@DeltaKroneckerGithub-15'
+  - '@DeltaKroneckerGithub-16'
+  - ''
+  - '@DeltaKroneckerGithub-17'
+  - '@DeltaKroneckerGithub-18'
+  - vless-1275624775
+  - '@DeltaKroneckerGithub-19'
+  - '@DeltaKroneckerGithub-20'
+  - '@DeltaKroneckerGithub-21'
+  - '@DeltaKroneckerGithub-22'
+  - qoli_051
+  - '@DeltaKroneckerGithub-23'
+  - '@DeltaKroneckerGithub-24'
+  - '@DeltaKroneckerGithub-25'
+  - '@DeltaKroneckerGithub-26'
+  - '@DeltaKroneckerGithub-27'
+  - '@DeltaKroneckerGithub-28'
+  - '@DeltaKroneckerGithub-29'
+  - '@DeltaKroneckerGithub-30'
+  - 未知 SS-482
+  - 英国-06
+  - '@DeltaKroneckerGithub-31'
+  - vless-1149851409
+  - '@confiig_hub'
+  - 🇬🇧GB-82.38.31.10-0072
+  - 🇩🇪DE-8.209.74.72-0120
+  - '@DeltaKroneckerGithub-32'
+  - 🇬🇧GB-82.38.31.34-0086
+  - '@DeltaKroneckerGithub-33'
+  - 🇬🇧GB-82.38.31.194-0091
+  - '@DeltaKroneckerGithub-34'
+  - '@DeltaKroneckerGithub-35'
+  - '@DeltaKroneckerGithub-36'
+  - '@DeltaKroneckerGithub-37'
+  - vless-1149851385
+  - '@DeltaKroneckerGithub-38'
+  - '@DeltaKroneckerGithub-39'
+  - '@DeltaKroneckerGithub-40'
+  - '@DeltaKroneckerGithub-41'
+  - 未知 SS-454-01
+  - '@DeltaKroneckerGithub-42'
+  - '@DeltaKroneckerGithub-43'
+  - '@DeltaKroneckerGithub-44'
+  - '@DeltaKroneckerGithub-45'
+  - '@DeltaKroneckerGithub-46'
+  - 未知 SS-433
+  - '@DeltaKroneckerGithub-47'
+  - '@DeltaKroneckerGithub-48'
+- name: 🔮 负载均衡
+  type: load-balance
+  proxies:
+  - vless-479091138
+  - '@DeltaKroneckerGithub'
+  - 🇯🇵JP-149.22.87.204-0252
+  - 未知 VLESS-53
+  - 👉🆔@v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:71.53ms
+  - '@DeltaKroneckerGithub-01'
+  - '@DeltaKroneckerGithub-02'
+  - qoli_011
+  - 加拿大-09
+  - '@DeltaKroneckerGithub-03'
+  - 🇺🇸US-108.181.0.177-0066
+  - '@DeltaKroneckerGithub-04'
+  - 🇬🇧GB-82.38.31.202-0206
+  - '@DeltaKroneckerGithub-05'
+  - '@DeltaKroneckerGithub-06'
+  - '@DeltaKroneckerGithub-07'
+  - 🇳🇱NL_83
+  - '@DeltaKroneckerGithub-08'
+  - '@DeltaKroneckerGithub-09'
+  - '@DeltaKroneckerGithub-10'
+  - '@DeltaKroneckerGithub-11'
+  - '[hy2]DE｜德国-法兰克福/1(ipv6)'
+  - '@DeltaKroneckerGithub-12'
+  - '@DeltaKroneckerGithub-13'
+  - '@DeltaKroneckerGithub-14'
+  - 未知 SS-454
+  - 🇸🇬 Node-5f65bc46
+  - '@DeltaKroneckerGithub-15'
+  - '@DeltaKroneckerGithub-16'
+  - ''
+  - '@DeltaKroneckerGithub-17'
+  - '@DeltaKroneckerGithub-18'
+  - vless-1275624775
+  - '@DeltaKroneckerGithub-19'
+  - '@DeltaKroneckerGithub-20'
+  - '@DeltaKroneckerGithub-21'
+  - '@DeltaKroneckerGithub-22'
+  - qoli_051
+  - '@DeltaKroneckerGithub-23'
+  - '@DeltaKroneckerGithub-24'
+  - '@DeltaKroneckerGithub-25'
+  - '@DeltaKroneckerGithub-26'
+  - '@DeltaKroneckerGithub-27'
+  - '@DeltaKroneckerGithub-28'
+  - '@DeltaKroneckerGithub-29'
+  - '@DeltaKroneckerGithub-30'
+  - 未知 SS-482
+  - 英国-06
+  - '@DeltaKroneckerGithub-31'
+  - vless-1149851409
+  - '@confiig_hub'
+  - 🇬🇧GB-82.38.31.10-0072
+  - 🇩🇪DE-8.209.74.72-0120
+  - '@DeltaKroneckerGithub-32'
+  - 🇬🇧GB-82.38.31.34-0086
+  - '@DeltaKroneckerGithub-33'
+  - 🇬🇧GB-82.38.31.194-0091
+  - '@DeltaKroneckerGithub-34'
+  - '@DeltaKroneckerGithub-35'
+  - '@DeltaKroneckerGithub-36'
+  - '@DeltaKroneckerGithub-37'
+  - vless-1149851385
+  - '@DeltaKroneckerGithub-38'
+  - '@DeltaKroneckerGithub-39'
+  - '@DeltaKroneckerGithub-40'
+  - '@DeltaKroneckerGithub-41'
+  - 未知 SS-454-01
+  - '@DeltaKroneckerGithub-42'
+  - '@DeltaKroneckerGithub-43'
+  - '@DeltaKroneckerGithub-44'
+  - '@DeltaKroneckerGithub-45'
+  - '@DeltaKroneckerGithub-46'
+  - 未知 SS-433
+  - '@DeltaKroneckerGithub-47'
+  - '@DeltaKroneckerGithub-48'
+- name: 📲 电报消息
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+  - DIRECT
+  - REJECT
+- name: 💬 Ai平台
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+  - DIRECT
+  - REJECT
+- name: 📹 油管视频
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+  - DIRECT
+  - REJECT
+- name: 🎥 奈飞视频
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+  - DIRECT
+  - REJECT
+- name: 📺 巴哈姆特
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+  - DIRECT
+  - REJECT
+- name: 📺 哔哩哔哩
+  type: select
+  proxies:
+  - DIRECT
+  - REJECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: 🌍 国外媒体
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+  - DIRECT
+  - REJECT
+- name: 🌏 国内媒体
+  type: select
+  proxies:
+  - DIRECT
+  - REJECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: 📢 谷歌FCM
+  type: select
+  proxies:
+  - DIRECT
+  - REJECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: 📢 谷歌服务
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+  - DIRECT
+  - REJECT
+- name: Ⓜ️ 微软Bing
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+  - DIRECT
+  - REJECT
+- name: Ⓜ️ 微软云盘
+  type: select
+  proxies:
+  - DIRECT
+  - REJECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: Ⓜ️ 微软服务
+  type: select
+  proxies:
+  - DIRECT
+  - REJECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: 🍎 苹果服务
+  type: select
+  proxies:
+  - DIRECT
+  - REJECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: 🎮 游戏平台
+  type: select
+  proxies:
+  - DIRECT
+  - REJECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: 🎶 网易音乐
+  type: select
+  proxies:
+  - DIRECT
+  - REJECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: 🎶 Spotify
+  type: select
+  proxies:
+  - DIRECT
+  - REJECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: 🎯 全球直连
+  type: select
+  proxies:
+  - DIRECT
+  - REJECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: 🛑 广告拦截
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: 🍃 应用净化
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: 🛡️ 隐私防护
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+- name: 🐟 漏网之鱼
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - 🇯🇵 日本节点
+  - 🇬🇧 英国节点
+  - 🇺🇸 美国节点
+  - DIRECT
+  - REJECT
+- name: 🇯🇵 日本节点
+  type: url-test
+  filter: (?i:\b(?:JP|JPN)\d*\b|Japan|Tokyo|Osaka|Saitama|日本|东京|大阪|埼玉|[^-]日)
+  proxies:
+  - 🇯🇵JP-149.22.87.204-0252
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  tolerance: 50
+- name: 🇬🇧 英国节点
+  type: url-test
+  filter: (?i:\b(?:UK|GB|GBR)\d*\b|United.*?Kingdom|Britain|London|Manchester|Birmingham|英国|[^-]英)
+  proxies:
+  - 🇬🇧GB-82.38.31.202-0206
+  - 英国-06
+  - 🇬🇧GB-82.38.31.10-0072
+  - 🇬🇧GB-82.38.31.34-0086
+  - 🇬🇧GB-82.38.31.194-0091
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  tolerance: 50
+- name: 🇺🇸 美国节点
+  type: url-test
+  filter: (?i:\b(?:US|USA)\d*\b|America|United.*?States|美国|[^-]美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥)
+  proxies:
+  - 🇺🇸US-108.181.0.177-0066
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  tolerance: 50
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/LocalAreaNetwork.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FLocalAreaNetwork.list&template=general
+  UnBan:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/UnBan.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FUnBan.list&template=general
+  BanAD:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/BanAD.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FBanAD.list&template=general
+  BanProgramAD:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/BanProgramAD.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FBanProgramAD.list&template=general
+  BanEasyList:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/BanEasyList.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FBanEasyList.list&template=general
+  BanEasyListChina:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/BanEasyListChina.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FBanEasyListChina.list&template=general
+  BanEasyPrivacy:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/BanEasyPrivacy.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FBanEasyPrivacy.list&template=general
+  GoogleFCM:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/GoogleFCM.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FGoogleFCM.list&template=general
+  Google:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Google.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FGoogle.list&template=general
+  Adobe:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Adobe.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FAdobe.list&template=general
+  Bing:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Bing.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FBing.list&template=general
+  OneDrive:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/OneDrive.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FOneDrive.list&template=general
+  Microsoft:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Microsoft.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FMicrosoft.list&template=general
+  Apple:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Apple.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FApple.list&template=general
+  Telegram:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Telegram.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FTelegram.list&template=general
+  AI:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/AI.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FAI.list&template=general
+  OpenAi:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/OpenAi.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FOpenAi.list&template=general
+  NetEaseMusic:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/NetEaseMusic.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FNetEaseMusic.list&template=general
+  Spotify:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Spotify.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FSpotify.list&template=general
+  Epic:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Epic.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FEpic.list&template=general
+  Origin:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Origin.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FOrigin.list&template=general
+  Sony:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Sony.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FSony.list&template=general
+  Steam:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Steam.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FSteam.list&template=general
+  Nintendo:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Nintendo.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FNintendo.list&template=general
+  YouTube:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/YouTube.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FYouTube.list&template=general
+  Netflix:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Netflix.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FNetflix.list&template=general
+  Bahamut:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Bahamut.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FBahamut.list&template=general
+  BilibiliHMT:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/BilibiliHMT.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FBilibiliHMT.list&template=general
+  Bilibili:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Bilibili.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FRuleset%2FBilibili.list&template=general
+  ChinaMedia:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/ChinaMedia.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FChinaMedia.list&template=general
+  ProxyMedia:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/ProxyMedia.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FProxyMedia.list&template=general
+  ProxyGFWlist:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/ProxyGFWlist.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FProxyGFWlist.list&template=general
+  ChinaIp:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/ChinaIp.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FChinaIp.list&template=general
+  ChinaDomain:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/ChinaDomain.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FChinaDomain.list&template=general
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/ChinaCompanyIp.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FChinaCompanyIp.list&template=general
+  Download:
+    type: http
+    behavior: classical
+    format: text
+    interval: 604800
+    path: ./rule/Download.txt
+    url: http://127.0.0.1:8080/proxy?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubConv%2FZJU-Rule%2Fmain%2FClash%2FDownload.list&template=general
+rules:
+- DOMAIN,127.0.0.1,DIRECT
+- RULE-SET,LocalAreaNetwork,🎯 全球直连
+- RULE-SET,UnBan,🎯 全球直连
+- RULE-SET,BanAD,🛑 广告拦截
+- RULE-SET,BanProgramAD,🍃 应用净化
+- RULE-SET,BanEasyList,🛑 广告拦截
+- RULE-SET,BanEasyListChina,🛑 广告拦截
+- RULE-SET,BanEasyPrivacy,🛡️ 隐私防护
+- RULE-SET,GoogleFCM,📢 谷歌FCM
+- RULE-SET,Google,📢 谷歌服务
+- RULE-SET,Adobe,🎯 全球直连
+- RULE-SET,Bing,Ⓜ️ 微软Bing
+- RULE-SET,OneDrive,Ⓜ️ 微软云盘
+- RULE-SET,Microsoft,Ⓜ️ 微软服务
+- RULE-SET,Apple,🍎 苹果服务
+- RULE-SET,Telegram,📲 电报消息
+- RULE-SET,AI,💬 Ai平台
+- RULE-SET,OpenAi,💬 Ai平台
+- RULE-SET,NetEaseMusic,🎶 网易音乐
+- RULE-SET,Spotify,🎶 Spotify
+- RULE-SET,Epic,🎮 游戏平台
+- RULE-SET,Origin,🎮 游戏平台
+- RULE-SET,Sony,🎮 游戏平台
+- RULE-SET,Steam,🎮 游戏平台
+- RULE-SET,Nintendo,🎮 游戏平台
+- RULE-SET,YouTube,📹 油管视频
+- RULE-SET,Netflix,🎥 奈飞视频
+- RULE-SET,Bahamut,📺 巴哈姆特
+- RULE-SET,BilibiliHMT,📺 哔哩哔哩
+- RULE-SET,Bilibili,📺 哔哩哔哩
+- RULE-SET,ChinaMedia,🌏 国内媒体
+- RULE-SET,ProxyMedia,🌍 国外媒体
+- RULE-SET,ProxyGFWlist,🚀 节点选择
+- RULE-SET,ChinaIp,🎯 全球直连
+- RULE-SET,ChinaDomain,🎯 全球直连
+- RULE-SET,ChinaCompanyIp,🎯 全球直连
+- RULE-SET,Download,🎯 全球直连
+- GEOIP,CN,🎯 全球直连
+- MATCH,🐟 漏网之鱼
